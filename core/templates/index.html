@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+<!-- {% block title %}
+ Main
+{% endblock title %} -->
+
+{% block content %}
+<div class="Home">
+
+	<a class="brand-logo" href="{{ url_for('index') }}">
+	<img class="logo" src="{{ url_for('static', filename='Logo.svg') }}">
+	<div class="brand-logo-name"><strong> Organize </strong> </div>
+	</a>
+  
+<html lang="en">
+    <head>
+        <title>Test HTML</title>
+    </head>
+    <body>
+        <h1>{{greet}}</h1>
+    </body>
+</html>
+  
+	<div class="call-to-action">
+		<h2 class="title">Achieve all your daily and weekly objectives in timely fashion <i class="fa fa-clock-o" aria-hidden="true"></i></h2>
+		<h3 class="subtitle"> <strong>ToDo</strong> makes it easy to create and organize your tasks </h3>
+		<a href="{{ url_for('auth.login') }}" class="btn">Let’s get started</a>
+	</div>
+  
+  </div>
+  
+{% endblock content %}
